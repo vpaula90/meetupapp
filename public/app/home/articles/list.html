@@ -1,0 +1,15 @@
+<h2>List of articles</h2>
+<div class="row">
+  <div class="col-6">
+    <ul class="list-group">
+      <li ng-repeat="article in articles" class="list-group-item list-group-item-action">
+        <a ui-sref="articles.view" ng-click="view(article)">
+          {{article.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-6">
+    <ui-view ng-if="article"></ui-view>
+  </div>
+</div>

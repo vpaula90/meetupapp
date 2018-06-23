@@ -1,0 +1,31 @@
+<h2>Newsletter</h2>
+
+<div class = "row" ng-show=" mode=='add' ">
+  <div class ="col-12">
+    Add Newsletter Email list
+  </div>
+</div>
+<div class="container">
+    <!-- Using tables -->
+    <div class="row">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+
+            </tr>
+            <tr ng-repeat="x in newsletter">
+                <td>{{x.name}}</td>
+                <td>{{x.email}}</td>
+            </tr>
+          </table>
+
+        <table class="table table-striped table-hover">
+          <tr ng-repeat="pet in pets">
+              <td>{{pet.name}}<td>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+          </tr>
+        </table>
+    </div>
+</div>

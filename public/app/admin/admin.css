@@ -1,0 +1,5 @@
+.grid {
+    width: auto;
+    height: 200px;
+}
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

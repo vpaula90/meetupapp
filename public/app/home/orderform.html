@@ -1,0 +1,26 @@
+<h3>Kitty Order!</h3>
+<div class="container">
+	<div class="row">
+    <div class="col-12">
+      <input type="email" ng-model="forms.email", placeholder="enter your email">
+      <input type="name" ng-model="forms.name", placeholder="enter your name">
+			<div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="address" class="form-control" id="exampleFormControlInput1" placeholder="Shipping Address">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Kitty 1</option>
+      <option>Kitty 2</option>
+      <option>Kitty 3</option>
+    </select>
+  </div>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Text</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		<a ui-sref="home.thankyou" class="btn btn-primary" ng-click="submit()">Submit</a>
+  </div>
+    </div>
+	</div>
+</div>

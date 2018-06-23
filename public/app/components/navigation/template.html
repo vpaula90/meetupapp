@@ -1,0 +1,46 @@
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Your Company</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <!-- Default Navigation -->
+            <ul ng-if="!user.uid" class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="articles">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="login">Login</a>
+                </li>
+            </ul>
+
+            <!-- Admin Navigation -->
+            <ul ng-if="user.uid" class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" ui-sref="admin.users">Users</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" ui-sref="admin.newsletter">Newsletter</a>
+              </li>
+                <li ng-if="user.isAdmin" class="nav-item">
+                    <a class="nav-link" ui-sref="articles">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="admin.forms">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a ng-click="user.logout()" href="#" class="nav-link">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
